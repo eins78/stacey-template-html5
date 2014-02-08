@@ -6,6 +6,15 @@
     <title>{% if page.title %}{{ page.title }} » {% endif %}{{ page.name }} — {{ page.tagline }}
     </title>
     <link rel="alternate" type="application/atom+xml" href="{{ page.root_path }}/?/feed/">
+    <!-- static css to hide internally used classes -->
+    <style type="text/css" media="screen">
+      .js-only, .sr-only {
+        display: none;
+      }
+      body.js-enabled .js-only{
+        display: inherit;
+      }
+    </style>
     <!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="{{ page.root_path }}/public/css/style.css" type="text/css" media="screen">
     {% block head_tail %}
