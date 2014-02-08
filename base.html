@@ -18,17 +18,7 @@
       {% block header_before %}
       {% endblock %}
       {% block header %}
-      <header>
-        {% block header_head %}
-        {% endblock %}
-        <h1>
-          <a href="{{ page.root_path }}">{{ page.name }}</a>
-          <strong>{{ page.profession }}</strong>
-        </h1>
-        <div class="email">{{ page.email }}</div>
-        {% block header_tail %}
-        {% endblock %}
-      </header>
+        {% include   'partials/_header.html' %}
       {% endblock %}
       {% block header_after %}
       {% endblock %}
@@ -61,15 +51,8 @@
       {% block footer_before %}
       {% endblock %}
       
-      <footer>
-        {% block footer_head %}
-        {% endblock %}
-        
-        &copy; Copyright {{ page.name }} {{ page.current_year }} <a class="atom-rss" href="{{ page.root_path }}/?/feed/">RSS</a><br>
-        {% block footer_tail %}
-        {% endblock %}
-        
-      </footer>
+      {% include 'partials/_footer.html' %}
+      
       {% block footer_after %}
       {% endblock %}
       

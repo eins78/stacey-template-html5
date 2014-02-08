@@ -1,0 +1,11 @@
+<header>
+  {% block header_head %}
+  {% endblock %}
+  <h1>
+    <a href="{{ page.root_path }}">{{ page.name }}</a>
+    <small class="tagline">{{ page.tagline }}</small>
+  </h1>
+  <div class="email">{{ page.email }}</div>
+  {% block header_tail %}
+  {% endblock %}
+</header>

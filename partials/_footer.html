@@ -1,0 +1,9 @@
+<footer>
+  {% block footer_head %}
+  {% endblock %}
+  
+  &copy; Copyright {{ page.name }} {{ page.current_year }} <a class="atom-rss" href="{{ page.root_path }}/?/feed/">RSS</a><br>
+  {% block footer_tail %}
+  {% endblock %}
+  
+</footer>
