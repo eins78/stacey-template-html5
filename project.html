@@ -1,10 +1,14 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <div id="description">
+
+  <section id="main">
     <h2 id="title"><a href="{{ page.root_path }}">{{ page.title }}</a></h2>
+    
     {% include 'partials/metadata.html' %}
+    
     {{ page.content }}
+    
     <small id="colophon">{{ page.colophon }}</small>
   </div>
   <hr>

@@ -2,7 +2,7 @@
   {% if child.children %}
     <ul class="projects">
     {% for child in child.children %}
-      <li class="col seven {{ child.id }}">
+      <li class="{{ child.id }}">
         {% if child.date %}<p id="date">{% include 'partials/date.html' %}</p>{% endif %}
         <h2>
           {% if child.thumb %}
