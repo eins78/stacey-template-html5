@@ -9,4 +9,4 @@ This is a **blank** template (no style), made to be extensible.
 
 - html5
 - lots of optional metadata
-- 1 `base.html` template, all other templates [extend it](http://twig.sensiolabs.org/doc/templates.html#template-inheritance)
+- 1 `base.html` template, all other templates [extend](http://twig.sensiolabs.org/doc/templates.html#template-inheritance) it
