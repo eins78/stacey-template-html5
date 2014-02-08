@@ -18,15 +18,16 @@ This is a **blank** template (no style), made to be [customizable, extensible an
 
 ## HTML Structure
 
-If you want to style it with `CSS`, this is the list of `element`s, `.class`es and `#id`s, and how they are nested:
+If you want to style it with `CSS`, this is the list of `element`s, `.class`es and `#id`s, and how they are nested.
+The structure aims to be minimal, with just enough markup to make the most common layouts possible in pure CSS.
 
 - `head`
 - `body`
-    - `div.container`
+    - `div.wrapper` 
         - `header`
-        - `ul#navigation`
-        - `div#content`
-        - `footer`
+        - `nav#primary`
+        - `article`
+    - `footer`
 
 ## Template Structure
 
