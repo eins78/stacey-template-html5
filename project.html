@@ -1,27 +1,25 @@
-{% extends "base.html" %}
+{% extends "default.html" %}
 
-{% block content %}
 
-  <section id="main">
-    <h2 id="title"><a href="{{ page.root_path }}">{{ page.title }}</a></h2>
-    
-    {% include 'partials/metadata.html' %}
-    
-    {{ page.content }}
-    
-    <small id="colophon">{{ page.colophon }}</small>
-    
-  </section>
-  
-  {% include 'partials/navigation/child-navigation.html' with {'title': 'More: '} %}
-    
-  {% include 'partials/navigation/page-navigation.html' with {'title': 'Other Projects', 'id': 'subpages-top'} %}
-  
-  {% include 'partials/section-media.html' with {'title': 'Media'} %}
-  
-  {% include 'partials/navigation/page-navigation.html' with {'title': 'Other Projects', 'id': 'subpages-bottom'} %}
-  
+{% block title_after %}
+  {% include 'partials/metadata.html' %}
 {% endblock %}
+
+
+{% block main_tail %}
+  <small id="colophon">{{ page.colophon }}</small>
+{% endblock %}
+  
+{% block main_after %}
+  {% include 'partials/navigation/child-navigation.html' with {'title': 'More: '} %}
+  
+  {% include 'partials/navigation/page-navigation.html' with {'title': 'Other Projects', 'id': 'subpages-top'} %}
+
+  {% include 'partials/section-media.html' with {'title': 'Media'} %}
+
+  {% include 'partials/navigation/page-navigation.html' with {'title': 'Other Projects', 'id': 'subpages-bottom'} %}
+{% endblock %}
+  
 
 {% block container_after %}
   <script type="text/javascript" charset="utf-8">

@@ -1,15 +1,34 @@
-{% extends "base.html" %}
+{% extends "default.html" %}
 
 {% block content %}
-  {% if page.date %}<p id="date">{% include 'partials/date.html' %} &para;</p>{% endif %}
-  <div id="description">
-    <h2 id="title"><a href="{{ page.root_path }}">{{ page.title }}</a></h2>
-    {% include 'partials/assets/images.html' %}
-    {{ page.content }}
-    {% include 'partials/assets/pdfs.html' %}
-  </div>
+
+  <section id="main">
+    {% block main %}
+      {% block title %}
+        <h2 id="title"><a href="{{ page.root_path }}">{{ page.title }}</a></h2>
+      {% endblock %}
+    
+      {% block title_after %}
+        {% include 'partials/assets/images.html' %}
+      {% endblock %}
+      
+      {{ page.content }}
+      
+      {% block main_tail %}
+        {% include 'partials/assets/pdfs.html' %}
+      {% endblock %}
+
+    {% endblock %}
+  </section>
+  
+  {% block main_after %}
+  {% endblock %}
+  
 {% endblock %}
+
 
 {% block container_after %}
   <script src="{{ page.root_path }}/public/docs/js/jquery-1.3.2.js" type="text/javascript" charset="utf-8"></script>
 {% endblock %}
+
+

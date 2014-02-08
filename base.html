@@ -35,17 +35,52 @@
         {% endblock %}
         
         {% block content %}
-        {% endblock %}
         
+          <section id="main">
+            {% block main %}
+            
+              {% block title %}
+                <h2 id="title">
+                  <a href="{{ page.root_path }}">{{ page.title }}
+                  </a>
+                  {% if page.description %}
+                  <small>{{ page.description }}</small>
+                  {% endif %}
+                </h2>
+              {% endblock %}
+              
+              {% block title_after %}
+              {% endblock %}
+              
+              {{ page.content }}
+              
+              {% block main_tail %}
+                {% if page.nolist != true %}
+                  {% include 'partials/navigation/category-lists.html' %}
+                {% endif %}
+              {% endblock %}
+
+            {% endblock %}
+          </section>
+  
+          {% block main_after %}
+          {% endblock %}
+  
+        {% endblock %}
+                
         {% block content_tail %}
         {% endblock %}
       </article>
+      
       {% block content_after %}
         <hr>
       {% endblock %}
 
     </div> <!-- end .wrapper  -->
       
+    {% block wrapper_after %}
+    {% endblock %}
+    
     {% block footer_before %}
     {% endblock %}
     
@@ -54,8 +89,5 @@
     {% block footer_after %}
     {% endblock %}
       
-    {% block container_after %}
-    {% endblock %}
-    
   </body>
 </html>
