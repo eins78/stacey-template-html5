@@ -2,7 +2,7 @@
 
 {% block content %}
 <div id="content">
-  <p class="date">&para;</p>
+  {% if page.date %}<p id="date">{% include 'partials/date.html' %} &para;</p>{% endif %}
   <div class="description">
     <h2><a href="{{ page.root_path }}">{{ page.title }}</a></h2>
     <form class="logo-bottom three" action="/search">

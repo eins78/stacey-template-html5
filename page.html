@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <p id="date">&para;</p>
+  {% if page.date %}<p id="date">{% include 'partials/date.html' %} &para;</p>{% endif %}
   <div id="description">
     <h2 id="title"><a href="{{ page.root_path }}">{{ page.title }}</a></h2>
     {% include 'partials/assets/images.html' %}

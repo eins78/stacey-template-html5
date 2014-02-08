@@ -1,5 +1,5 @@
 <ul class="metadata">
-  {% if page.data %}<li class="date"><span data-date="{{ page.date|date("c") }}">{{ page.date|date("Y-m-d") }}</span></li>{% endif %}
+  {% if page.date %}<li class="date">{% include 'partials/date.html' %}</li>{% endif %}
   {% if page.media %}<li class="media">{{ page.media }}{% if page.size %}</li>{% endif %}
   {% if page.size %}<li class="size">{{ page.size }}</li>{% endif %}
   <li class="material">{{ page.material }}</li>{% endif %}

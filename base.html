@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
+
   <head>
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta charset="utf-8" />
     <title>{% if page.title %}{{ page.title }} » {% endif %}{{ page.name }} — {{ page.tagline }}
     </title>
     <link rel="alternate" type="application/atom+xml" href="{{ page.root_path }}/?/feed/">
@@ -11,6 +12,7 @@
     {% block head_tail %}
     {% endblock %}
   </head>
+  
   <body {% if page.id %}class="{{ page.id }}"{% endif %}>
     {% block container_before %}
     {% endblock %}
@@ -24,6 +26,8 @@
         <hr>
       {% endblock %}
       
+      <a href="#content" class="sr-only">Skip to Content</a>
+      
       {% block navigation_before %}
       {% endblock %}
       {% block navigation %}
@@ -34,7 +38,7 @@
       
       {% block content_before %}
       {% endblock %}
-      <div id="content">
+      <article id="content">
         {% block content_head %}
         {% endblock %}
         
@@ -43,11 +47,10 @@
         
         {% block content_tail %}
         {% endblock %}
-      </div>
+      </article>
       {% block content_after %}
         <hr>
       {% endblock %}
-      
       
       {% block footer_before %}
       {% endblock %}
