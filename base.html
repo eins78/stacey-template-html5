@@ -27,7 +27,7 @@
   <body {% if page.id %}class="{{ page.id }}"{% endif %}>
     {% block container_before %}
     {% endblock %}
-    <div class="container">
+    <div id="wrapper">
       {% block header_before %}
       {% endblock %}
       {% block header %}
@@ -62,16 +62,17 @@
       {% block content_after %}
         <hr>
       {% endblock %}
+
+    </div> <!-- end .wrapper  -->
       
-      {% block footer_before %}
-      {% endblock %}
+    {% block footer_before %}
+    {% endblock %}
+    
+    {% include 'partials/_footer.html' %}
+    
+    {% block footer_after %}
+    {% endblock %}
       
-      {% include 'partials/_footer.html' %}
-      
-      {% block footer_after %}
-      {% endblock %}
-      
-    </div> <!-- end container  -->
     {% block container_after %}
     {% endblock %}
     
