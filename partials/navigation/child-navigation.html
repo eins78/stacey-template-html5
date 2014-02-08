@@ -1,0 +1,6 @@
+{% if _context.siblings %}
+  <nav id="children">
+    {% if _context.title %}<h3>{{_context.title}}</h3>{% endif %}
+    {% include 'partials/project-count.html' %}
+  </nav>
+{% endif %}

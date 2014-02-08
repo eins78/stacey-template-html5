@@ -1,0 +1,25 @@
+{% set has_media = false %}
+
+{% for item in ['images', 'video', 'swf', 'html'] %}
+  {% if page[item] %}
+    {% set has_media = true %}
+  {% endif %}
+{% endfor %}
+
+{% if has_media %}
+<section id="media">
+  {% if _context.title %}
+    <h3>{{_context.title}}</h3>
+  {% endif %}
+  
+  <p id="gallery-count">
+    <em>&#8470;</em> <span>1/1</span>
+  </p>
+  
+  {% include 'partials/navigation/gallery-navigation.html' %}
+  
+  {% include 'partials/assets/media.html' %}
+  
+</section>
+
+{% endif %}

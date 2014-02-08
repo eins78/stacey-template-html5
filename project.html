@@ -10,23 +10,17 @@
     {{ page.content }}
     
     <small id="colophon">{{ page.colophon }}</small>
-  </div>
-  <hr>
-  <p id="project-count"><em>&#8470;</em> {{ page.index }}/{{ page.siblings_count }}</p>
-  <p id="gallery-count">
-    <em>&#8470;</em> <span>1/1</span>
-  </p>
-  <div id="gallery-navigation">
-    <p><a href="#" id="next-image">Next image</a> <em>&rarr;</em></p>
-    <p><a href="#" id="previous-image">Previous image</a> <em>&larr;</em></p>
-  </div>
-  <div id="subnavigation">
-    {% if page.siblings %}
-      {% include 'partials/next-page.html' %}
-      {% include 'partials/previous-page.html' %}
-    {% endif %}
-  </div>
-  {% include 'partials/assets/media.html' %}
+    
+  </section>
+  
+  {% include 'partials/navigation/child-navigation.html' with {'title': 'More: '} %}
+    
+  {% include 'partials/navigation/page-navigation.html' with {'title': 'Other Projects', 'id': 'subpages-top'} %}
+  
+  {% include 'partials/section-media.html' with {'title': 'Media'} %}
+  
+  {% include 'partials/navigation/page-navigation.html' with {'title': 'Other Projects', 'id': 'subpages-bottom'} %}
+  
 {% endblock %}
 
 {% block container_after %}

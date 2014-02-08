@@ -1,0 +1,17 @@
+  <aside {% if _context.id %}id="{{_context.id}}"{% endif %}>
+    
+    {% if _context.title %}<h3>{{_context.title}}</h3>{% endif %}
+    
+    <div class="page-navigation">
+      {% for sibling in page.next_sibling %}
+        <p><a href="{{ sibling.url }}">{{ sibling.title }}</a></p>
+      {% endfor %}
+      
+      {% include 'partials/project-count.html' %}
+      
+      {% for sibling in page.previous_sibling %}
+        <p><a href="{{ sibling.url }}">{{ sibling.title }}</a></p>
+      {% endfor %}
+    </div>
+    
+  </aside>
