@@ -7,13 +7,13 @@ download: <https://github.com/eins78/stacey-template-html5/archive/master.zip>
 
 demo: <http://mfa.178.is>
 
-This is a **blank** template (no style), made to be extensible.
+This is a **blank** template (no style), made to be [customizable, extensible and forkable](#template-structure).
 
-- html5
-- lots of optional metadata
-- style it just with CSS
-- configure it with data in `content`
-- 1 `base.html` template, all other templates [extend](http://twig.sensiolabs.org/doc/templates.html#template-inheritance) it
+- **html5** (semantic, [valid](http://validator.w3.org/check?uri=http%3A%2F%2Fmfa.178.is%2F;outline=1))!
+- **style it just with CSS**!
+- lots of **optional metadata**! ([read more](#html-structure))
+- **configureable** with data
+- 1 `base.html` template, all other templates [extend](http://twig.sensiolabs.org/doc/templates.html#template-inheritance) it ([read more](#template-structure))
 
 
 ## HTML Structure
@@ -29,6 +29,8 @@ If you want to style it with `CSS`, this is the list of `element`s, `.class`es a
         - `footer`
 
 ## Template Structure
+
+If you want to change something about the template not possible in `CSS`, it is easy to extend and modify it in a maintainable way.
 
 ### inheritance
 
@@ -128,3 +130,9 @@ The content section in pages is overriden by defining a new `block content`.
 {% endblock %}
 ````
 
+
+
+## TODO
+
+- if language: `<html lang="">`
+- feed title in head
