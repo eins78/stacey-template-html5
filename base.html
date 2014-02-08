@@ -8,7 +8,7 @@
     <!-- <link rel="stylesheet" href="{{ page.root_path }}/public/docs/css/screen.css" type="text/css" media="screen"> -->
     <!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="{{ page.root_path }}/public/docs/css/style.css" type="text/css" media="screen">
-    {% block head %}
+    {% block head_tail %}
     {% endblock %}
   </head>
   <body {% if page.id %}class="{{ page.id }}"{% endif %}>
@@ -18,14 +18,17 @@
       {% block header_before %}
       {% endblock %}
       {% block header %}
-        {% include   'partials/_header.html' %}
+        {% include 'partials/_header.html' %}
       {% endblock %}
       {% block header_after %}
+        <hr>
       {% endblock %}
       
-      <hr>
-      
-      {% include 'partials/navigation/navigation.html' %}
+      {% block navigation_before %}
+      {% endblock %}
+      {% block navigation %}
+        {% include 'partials/_navigation.html' %}
+      {% endblock %}
       {% block navigation_after %}
       {% endblock %}
       
@@ -42,12 +45,10 @@
         {% endblock %}
       </div>
       {% block content_after %}
+        <hr>
       {% endblock %}
       
-      {% block main_after %}
-      {% endblock %}
       
-      <hr>
       {% block footer_before %}
       {% endblock %}
       
