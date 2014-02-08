@@ -1,6 +1,20 @@
 <ul class="metadata">
-  {% if page.date %}<li class="date">{% include 'partials/date.html' %}</li>{% endif %}
-  {% if page.media %}<li class="media">{{ page.media }}{% if page.size %}</li>{% endif %}
-  {% if page.size %}<li class="size">{{ page.size }}</li>{% endif %}
-  <li class="material">{{ page.material }}</li>{% endif %}
+  {% if page.date %}
+    <li class="date">{% include 'partials/date.html' %}</li>
+    {% endif %}
+  {% if page.media %}
+    {% for media in page.media %}
+      <li class="media">{{ media }}</li>
+    {% endfor %}
+  {% endif %}
+  {% if page.size %}
+    {% for size in page.size %}
+      <li class="size">{{ size }}</li>
+    {% endfor %}
+  {% endif %}
+  {% if page.material %}
+    {% for size in page.material %}
+      <li class="material">{{ material }}</li>
+    {% endfor %}
+  {% endif %}
 </ul>
