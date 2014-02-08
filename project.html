@@ -3,7 +3,9 @@
 {% block content %}
   <div id="description">
     <h2 id="title"><a href="{{ page.root_path }}">{{ page.title }}</a></h2>
+    {% include 'partials/metadata.html' %}
     {{ page.content }}
+    <small id="colophon">{{ page.colophon }}</small>
   </div>
   <hr>
   <p id="project-count"><em>&#8470;</em> {{ page.index }}/{{ page.siblings_count }}</p>
