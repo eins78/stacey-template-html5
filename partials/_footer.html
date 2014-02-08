@@ -2,7 +2,13 @@
   {% block footer_head %}
   {% endblock %}
   
-  &copy; Copyright {{ page.name }} {{ page.current_year }} <a class="atom-rss" href="{{ page.root_path }}/?/feed/">RSS</a><br>
+  © Copyright {{ page.name }} {{ page.current_year }} |
+  {% if page.license %}
+    {% include 'partials/license' %} |
+  {% endif %}
+  Feeds: 
+  <a class="feed-rss" href="{{ page.root_path }}/?/feed/">RSS</a>,
+  <a class="feed-json" href="{{ page.root_path }}/?/json/">JSON</a><br>
   {% block footer_tail %}
   {% endblock %}
   
