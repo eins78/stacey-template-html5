@@ -2,10 +2,10 @@
   {% block header_head %}
   {% endblock %}
   <h1>
-    <a href="{{ page.root_path }}">{{ page.name }}</a>
+    <a href="{{ page.root_path }}">{{ page.name }}</a>{% if page.profession %}, {{ page.profession }}{% endif %}
     <small class="tagline">{{ page.tagline }}</small>
   </h1>
-  <div class="email">{{ page.email }}</div>
+  <p class="email">{{ page.email }}</p>
   {% block header_tail %}
   {% endblock %}
 </header>
