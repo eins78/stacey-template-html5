@@ -131,6 +131,12 @@ The content section in pages is overriden by defining a new `block content`.
 {% endblock %}
 ````
 
+## *Pro-Tips®*
+
+### debugging
+
+- `<code>{{ _context|json_encode(constant('JSON_PRETTY_PRINT')) }}</code>`: dump the data a template receives in JSON format
+
 
 
 ## TODO
