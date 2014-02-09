@@ -3,7 +3,8 @@
   {% endblock %}
   <hgroup>
     <h1>
-      <a href="{{ page.root_path }}">{{ page.name }}</a>{% if page.profession %}, {{ page.profession }}. {% endif %}
+      <a href="{{ page.root_path }}">
+        {{ page.name }}</a>{% if page.profession %}, {{ page.profession }}. {% endif %}
       {% if page.tagline %}<small class="tagline">{{ page.tagline }}</small>{% endif %}
     </h1>
     {% if page.email %}<div class="email">{{ page.email }}</div>{% endif %}

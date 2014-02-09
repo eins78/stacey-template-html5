@@ -1,6 +1,7 @@
 <head>
   <meta charset="utf-8" />
-  <title>{% if page.title %}{{ page.title }} » {% endif %}{{ page.name }} — {{ page.tagline }}
+  <title>
+    {% if page.title %}{{ page.title }} » {% endif %}{{ page.name }}{% if page.profession %}, {{ page.profession }}. {% endif %}
   </title>
   <link rel="alternate" type="application/atom+xml" href="{{ page.root_path }}/?/feed/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
