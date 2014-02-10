@@ -140,7 +140,15 @@ If you want to use a font in your style tht is not normally installed on any com
 Be careful to choose readable font for the main text and use more fancy fonts for titles and navigation only.  
 
 Some choices:
-- ["I am different"](http://www.google.com/fonts/#ReviewPlace:refine/Collection:Nova+Round|Kelly+Slab|Nova+Flat|Offside|Supermercado+One|Source+Code+Pro|Nova+Square|Megrim|Exo+2|Pathway+Gothic+One|Geo|Montserrat) 
+
+- ["I am serious artist" (`sans-serif`, all families have lot's off different weigths)](http://www.google.com/fonts/#ReviewPlace:refine/Collection:Alegreya+Sans+SC|Source+Sans+Pro|Lato|Alegreya+Sans|Exo+2|Roboto|Titillium+Web|Open+Sans|Roboto+Condensed)
+
+- ["I am serious artist but would prefer this to be paper" (`sans-serif`)](http://www.google.com/fonts/#ReviewPlace:refine)
+
+- ["I am different" (for titles etc.)](http://www.google.com/fonts/#ReviewPlace:refine/Collection:Nova+Round|Kelly+Slab|Nova+Flat|Offside|Supermercado+One|Source+Code+Pro|Nova+Square|Megrim|Exo+2|Pathway+Gothic+One|Geo|Montserrat) 
+
+- ["I am playfull" (for titles etc.)](http://www.google.com/fonts/#ReviewPlace:refine/Collection:Knewave|Sarina|Hanalei+Fill|Erica+One|Caesar+Dressing|Corben|Fugaz+One|Sniglet|Passero+One|Fredoka+One|UnifrakturCook:700|Dynalight|Comfortaa|Titan+One|Bowlby+One+SC|Changa+One|Patua+One|Righteous|Carter+One|Oregano|Vampiro+One|VT323|Seaweed+Script)
+
 
 
 How to use them: you get a small snippet from google and put that in the first line of your css. 
