@@ -1,20 +1,27 @@
+{% set metadata = ['size', 'media', 'material'] %}
+
 <ul class="metadata">
+
   {% if page.date %}
     <li class="date">{% include 'partials/date.html' %}</li>
+  {% endif %}
+  
+  {% for data in metadata %}
+  
+    {% if page[data] %}
+      <li class="{{ data }}">
+      {% if page[data][0] is not defined %}
+        {{ page[data] }}
+      {% else %}
+        <ul>
+        {% for item in page[data] %}
+          <li>{{ item }}</li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+      </li>
     {% endif %}
-  {% if page.media %}
-    {% for media in page.media %}
-      <li class="media">{{ media }}</li>
-    {% endfor %}
-  {% endif %}
-  {% if page.size %}
-    {% for size in page.size %}
-      <li class="size">{{ size }}</li>
-    {% endfor %}
-  {% endif %}
-  {% if page.material %}
-    {% for size in page.material %}
-      <li class="material">{{ material }}</li>
-    {% endfor %}
-  {% endif %}
+  
+  {% endfor %}
+
 </ul>
