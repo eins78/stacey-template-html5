@@ -133,6 +133,23 @@ The content section in pages is overriden by defining a new `block content`.
 
 ## *Pro-Tips®*
 
+### webfonts
+
+If you want to use a font in your style tht is not normally installed on any computer, you have to embed that font. google has a [catalogue of fonts](http://www.google.com/webfonts/). 
+
+Be careful to choose readable font for the main text and use more fancy fonts for titles and navigation only.  
+
+Some choices:
+- ["I am different"](http://www.google.com/fonts/#ReviewPlace:refine/Collection:Nova+Round|Kelly+Slab|Nova+Flat|Offside|Supermercado+One|Source+Code+Pro|Nova+Square|Megrim|Exo+2|Pathway+Gothic+One|Geo|Montserrat) 
+
+
+How to use them: you get a small snippet from google and put that in the first line of your css. 
+
+- After you've selected your fonts (like from any link above), click on 'Use' in the bottom right.
+- Step 1: Select the exact weight of every font family you want to use, and scroll down to.
+- Step 2: Select any more languages you might need
+- Step 3: click on the '@import' tab and copy the `CSS` snippet
+
 ### debugging
 
 - `<code>{{ _context|json_encode(constant('JSON_PRETTY_PRINT')) }}</code>`: dump the data a template receives in JSON format
