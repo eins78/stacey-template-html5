@@ -143,7 +143,7 @@ Some choices:
 
 - ["I am serious artist" (`sans-serif`, all families have lot's off different weigths)](http://www.google.com/fonts/#ReviewPlace:refine/Collection:Alegreya+Sans+SC|Source+Sans+Pro|Lato|Alegreya+Sans|Exo+2|Roboto|Titillium+Web|Open+Sans|Roboto+Condensed)
 
-- ["I am serious artist but would prefer this to be paper" (`sans-serif`)](http://www.google.com/fonts/#ReviewPlace:refine)
+- ["I am serious artist but would prefer this to be paper" (`sans-serif`)](http://www.google.com/fonts/#ReviewPlace:refine/Collection:Neuton|Alegreya:400italic,400|Crimson+Text:400,400italic|Vollkorn:400italic,400|Gentium+Book+Basic:400,400italic|Volkhov)
 
 - ["I am different" (for titles etc.)](http://www.google.com/fonts/#ReviewPlace:refine/Collection:Nova+Round|Kelly+Slab|Nova+Flat|Offside|Supermercado+One|Source+Code+Pro|Nova+Square|Megrim|Exo+2|Pathway+Gothic+One|Geo|Montserrat) 
 
