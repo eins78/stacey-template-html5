@@ -1,3 +1,7 @@
+{% if page.query.plain is defined %}
+  {% set nostyle = true %}
+{% endif%}
+
 <head>
   <meta charset="utf-8" />
   <title>
@@ -5,6 +9,7 @@
   </title>
   <link rel="alternate" type="application/atom+xml" href="{{ page.root_path }}/?/feed/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% if nostyle != true %}
   <!-- static css to hide internally used classes -->
   <style type="text/css" media="screen">
     .js-only, .sr-only {
@@ -19,6 +24,8 @@
   </style>
   <!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet"> -->
   <link rel="stylesheet" href="{{ page.root_path }}/public/css/style.css" type="text/css" media="screen">
+  {% endif %}
+  
   {% block head_tail %}
   {% endblock %}
 </head>
