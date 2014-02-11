@@ -16,6 +16,21 @@ This is a **blank** template (no style), made to be [customizable, extensible an
 - 1 `base.html` template, all other templates [extend](http://twig.sensiolabs.org/doc/templates.html#template-inheritance) it ([read more](#template-structure))
 
 
+### Goals 
+
+(not reached yet)
+
+- Minimum possible markup
+- Use semantic `HTML5` elements where applicable
+- Only add `class`es and `id`s where neccessary for eindeutigkeit or styling
+- Common template options can be set from config (`shared.yml` or any sub-page…)
+- Ship some default styles: 1-3 main stylesheets inspired by the old stacey templates which build on (`@import) common modules.
+- For all interesting data points in listings, add appropriate classes (for use with `list.js`)
+- Don't rely on JavaScript for anything - js plugins extending the functionality should also extend the markup themselfes <small>(looking at you, old .gallery-nav)</small>
+- Use `HTML5`'s `data-foo` properties
+
+
+
 ## HTML Structure
 
 If you want to style it with `CSS`, this is the list of `element`s, `.class`es and `#id`s, and how they are nested.
@@ -149,14 +164,13 @@ Some choices:
 
 - ["I am playfull" (for titles etc.)](http://www.google.com/fonts/#ReviewPlace:refine/Collection:Knewave|Sarina|Hanalei+Fill|Erica+One|Caesar+Dressing|Corben|Fugaz+One|Sniglet|Passero+One|Fredoka+One|UnifrakturCook:700|Dynalight|Comfortaa|Titan+One|Bowlby+One+SC|Changa+One|Patua+One|Righteous|Carter+One|Oregano|Vampiro+One|VT323|Seaweed+Script)
 
-
-
 How to use them: you get a small snippet from google and put that in the first line of your css. 
 
 - After you've selected your fonts (like from any link above), click on 'Use' in the bottom right.
 - Step 1: Select the exact weight of every font family you want to use, and scroll down to.
 - Step 2: Select any more languages you might need
 - Step 3: click on the '@import' tab and copy the `CSS` snippet
+
 
 ### debugging
 
@@ -168,3 +182,16 @@ How to use them: you get a small snippet from google and put that in the first l
 
 - if language: `<html lang="">`
 - feed title in head
+
+- stacey split:
+    - clone stacey
+    - git-split folders: 
+        - app -> stacey-php(app?)
+        - template -> template-html5
+        - public -> to templates???
+        - content -> to fixture/example_content?
+    - new base repo uses submodules (git-hooks.sh?)
+    - set version to 5 ;)
+    - script: make a starterkit.zip
+        - attach to every github release
+    
