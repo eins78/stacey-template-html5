@@ -107,9 +107,88 @@ figure figcaption {
 }
 ````
 
-## Template Structure
+## Templating
 
 If you want to change something about the template not possible in `CSS`, it is easy to extend and modify it in a maintainable way.
+
+### HTML*5*?
+
+If you use `HTML` but think you don't "know" `HTML`**5**, here is everything you need to know (in this context):  
+We now have more (semantic) elements and properties, so we need fewer classes and other tricks, and there is less "cruft" in general (like the crazy doctype).
+
+Wording Cheatsheet: ""
+
+- Valid `HTML`**4**:
+
+    ````html
+    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+      "http://www.w3.org/TR/html4/strict.dtd">
+    <html>
+      <head></head>
+      <body>
+        <div class="header">
+        Hello World!
+      </div> <!-- end header -->
+      <div class="post">
+        <span class="time">31. 12. 1999
+          <span class="timestamp hidden">1999-31-12</span>
+        </span>
+        Lorem Ipsum
+      </div> <!-- end post -->
+    </body>
+    ````
+
+- Valid `HTML`**5**:
+
+    ````html
+    <!DOCTYPE html>
+    <body>
+      <header>Hello World!</header>
+      <article>
+        <time datetime="1999-31-12">31. 12. 1999</time>
+        Lorem Ipsum
+      </article>
+    </body>
+    ````
+
+Also, you are allowed to "invent" your own properties, as long as they start with `data-`. 
+One *could* use it for styling, but it is most useful for scripting. 
+This is another reason we need fewer classes, 
+and it also potentially makes the markup less confusing 
+for designers since all the classes that remain are meant for them.
+
+Example: 
+
+*`HTML`:* (a very simple list)
+
+````html
+<ul data-gallery="carousel">
+  <li><img src="foo.jpg"></li>
+  <li><img src="foo.jpg"></li>
+</ul>
+<script type="text/javascript">
+$('[data-gallery="carousel"]').each(function () {
+  alert($(this));
+});
+</script>
+````
+
+*`CSS`:* 
+
+(This is how you could style your own data – but most likely these kind of styles will already be included with the javascript that needs them.)
+
+````css
+[data-gallery="carousel"] li {
+  list-item-style: none;
+  display: inline;
+}
+[data-gallery="carousel"] img{
+  float: left;
+}
+````
+
+
+### Template Structure
 
 ### inheritance
 
@@ -130,6 +209,7 @@ Just a define a block by the same name, followed by `_before` or `_after` for in
 
 Blocks that have a more complicated inner structure themselves, are broken out into `partials`, and `includ`ed in the templates.
 Partials that are directly used in `base.html` start with an underscore (i.e. `_header`, `_footer`).
+
 
 ### overview
 
