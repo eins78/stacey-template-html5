@@ -1,5 +1,4 @@
-stacey-template-html5
-=====================
+# `stacey-template-html5`
 
 html5 template for stacey (https://github.com/kolber/stacey)
 
@@ -31,18 +30,82 @@ This is a **blank** template (no style), made to be [customizable, extensible an
 
 
 
-## HTML Structure
+## Styling with `CSS`
 
-If you want to style it with `CSS`, this is the list of `element`s, `.class`es and `#id`s, and how they are nested.
 The structure aims to be minimal, with just enough markup to make the most common layouts possible in pure CSS.
 
+There are **two ways** to customize your site:
+
+1. **Use the default style, make small adjustments** (recommended for end-users)
+  - there is already a **'`user.css`'** where you can fill out declarations for common things like fonts, colors
+  - some things can also be configured, look at the example `_shared.yml`
+  - add anything else you might need
+  
+2. **Built you own stylesheet from scratch.**
+  - the default style is split up into small modules, so you can pick and choose and not really need to start from scratch
+  - you probably want to `@import` at least `base.css`, possibly also `typo.css` and `colors.css`
+  - in any case, you can use the default styles to look up some declarations
+
+
+
+### HTML Structure
+
+For reference, his is the list of `element`s, `.class`es and `#id`s, and how they are nested. **Bold** elements are the ones you are most likely to use for making a layout.
+
 - `head`
-- `body`
-    - `div.wrapper` 
-        - `header`
-        - `nav#primary`
-        - `article`
-    - `footer`
+- **`body`**
+    - `div#wrapper` 
+        - **`header`**
+            - `hgroup`
+                - `h1`
+                  - `small`
+                - `div.email`
+        - `hr`
+        - **`nav#primary`** (e.g. sidebar)
+            - `ul`
+                - `li`
+                    - `ul` … (child menu)
+        - **`article`**
+            - `section#main`
+                - (main content)
+            - `aside#subpages-top`
+            - `section#media`
+              - `figure`
+                - `img`
+                - `figcaption`
+            - `aside#subpages-bottom`
+            - `hr`
+    - **`footer`**
+
+The list above uses `CSS`-style identifiers, so you can just use (or combine) them in your stylesheet as needed.
+
+### Example: *sidebar layout*
+
+````css
+nav#primary {
+  width: 300px;
+}
+article {
+  width: 700px;
+}
+````
+
+### Example: *style specific parts only*
+
+````css
+/* square marker: for ALL lists */
+ul {
+  list-style-type: square;
+}
+/* no markers: ONLY in navigation*/
+nav ul {
+  list-style-type: none;
+}
+/* use monospace captions*/
+figure figcaption {
+  font-family: monospace;
+}
+````
 
 ## Template Structure
 
