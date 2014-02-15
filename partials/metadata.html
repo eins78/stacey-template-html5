@@ -1,28 +1,31 @@
 {% set metadata = ['size', 'media', 'material'] %}
 
-<ul class="metadata">
+<dl class="metadata">
 
   {% if page.date %}
-    <li class="date">{% include 'partials/date.html' %}</li>
+  <dt>Date</dt>
   <dd data-item="date">{% include 'partials/date.html' with page %}</dd>
   {% endif %}
   
+  {# for every entry in the metadata list, #}
   {% for data in metadata %}
-  
+    
+    {# if there is data #}
     {% if page[data] %}
-      <li class="{{ data }}">
+      <dt data-item="{{ data }}">{{ data|capitalize }}</dt>
+      {# check if it is a list of things, #}
       {% if page[data][0] is not defined %}
-        {{ page[data] }}
+        {# if it is not, just put it #}
+        <dd data-item="{{ data }}">{{ page[data] }}</dd>
       {% else %}
-        <ul>
+        {# if it is a list, put every entry seperately #}
         {% for item in page[data] %}
-          <li>{{ item }}</li>
+          <dd data-item="{{ data }}">{{ item }}</dd>
         {% endfor %}
-        </ul>
       {% endif %}
       </li>
     {% endif %}
   
   {% endfor %}
 
-</ul>
+</dl>
