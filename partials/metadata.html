@@ -4,6 +4,7 @@
 
   {% if page.date %}
     <li class="date">{% include 'partials/date.html' %}</li>
+  <dd data-item="date">{% include 'partials/date.html' with page %}</dd>
   {% endif %}
   
   {% for data in metadata %}
