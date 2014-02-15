@@ -13,11 +13,11 @@
 {% block main_after %}
   {% include 'partials/navigation/child-navigation.html' with {'title': 'More: '} %}
   
-  {% include 'partials/navigation/page-navigation.html' with {'title': 'Other Projects', 'id': 'subpages-top'} %}
+  {% include 'partials/navigation/category-navigation.html' with {'title': 'Other Projects', 'class': 'category-nav-top'} %}
 
   {% include 'partials/section-media.html' with {'title': 'Media'} %}
 
-  {% include 'partials/navigation/page-navigation.html' with {'title': 'Other Projects', 'id': 'subpages-bottom'} %}
+  {% include 'partials/navigation/category-navigation.html' with {'title': 'Other Projects', 'class': 'category-nav-bottom'} %}
 {% endblock %}
   
 
