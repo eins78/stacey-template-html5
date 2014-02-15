@@ -17,12 +17,21 @@ article .metadata {
   min-height: 1em;
 }
 
+article .project-thumb {
+  width: 2.5em;
+  height: auto;
+}
+
 /* hidden elements */
 .category-nav-top {
   display: none;
 }
 
 /* navigation inside articles */
+
+article nav {
+  width: 100%;
+}
 
 article nav p {
   float: left;
