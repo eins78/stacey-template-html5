@@ -45,13 +45,16 @@
             {% block main %}
             
               {% block title %}
-                <h1 id="title">
-                  <a href="{{ page.root_path }}">{{ page.title }}
-                  </a>
-                  {% if page.description %}
-                  <small>{{ page.description }}</small>
-                  {% endif %}
-                </h1>
+                {% if page.title %}
+                  <h1>
+                    <a href="{{ page.root_path }}">
+                      {{ page.title }}
+                    </a>
+                    {% if page.description %}
+                    <small>{{ page.description }}</small>
+                    {% endif %}
+                  </h1>
+                {% endif %}
               {% endblock %}
               
               {% block title_after %}

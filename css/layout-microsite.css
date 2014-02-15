@@ -32,3 +32,8 @@
 
 /* - collapse & float the navigation list (good for small menus) */
 @import "mods/nav-collapsed.css";
+
+body {
+  font-size: 2em;
+  line-height: 1.25;
+}
