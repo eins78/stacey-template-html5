@@ -5,29 +5,29 @@
 */
 
 /* make sure navs are high enough */
-nav {
+nav#primary {
   display: inline-block;
 }
 
 /* reset base nav spacing */
-nav ul ul, nav ul ol, 
-nav ol ul, nav ol ol {
+nav#primary ul ul, nav#primary ul ol, 
+nav#primary ol ul, nav#primary ol ol {
   padding-left: 0em;
 }
-nav ul li a,
-nav ol li a {
+nav#primary ul li a,
+nav#primary ol li a {
   margin-right: 0.5em;
 }
 
 
-nav li, nav a, 
-nav ul, nav ol {
+nav#primary li, nav#primary a, 
+nav#primary ul, nav#primary ol {
   float: left;
   position: relative;
   display: inline-block;
 }
 
-nav ul, nav ol {
+nav#primary ul, nav#primary ol {
   font-weight: 500;
   list-style-type: none;
   margin: 0;
