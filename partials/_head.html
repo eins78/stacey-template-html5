@@ -7,7 +7,7 @@
   <title>
     {% if page.title %}{{ page.title }} » {% endif %}{{ page.name }}{% if page.profession %}, {{ page.profession }}. {% endif %}
   </title>
-  <link rel="alternate" type="application/atom+xml" href="{{ page.root_path }}/?/feed/">
+  <link rel="alternate" type="application/atom+xml" href="{{ page.root_path }}?/feed/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {% if nostyle != true %}
   <!-- static css to hide internally used classes -->
@@ -22,8 +22,7 @@
       display: none;
     }
   </style>
-  <!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet"> -->
-  <link rel="stylesheet" href="{{ page.root_path }}/public/css/style.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="{{ page.root_path }}public/css/style.css" type="text/css" media="screen">
   {% endif %}
   
   {% block head_tail %}
