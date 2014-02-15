@@ -15,7 +15,30 @@ This is a **blank** template (no style), made to be [customizable, extensible an
 - 1 `base.html` template, all other templates [extend](http://twig.sensiolabs.org/doc/templates.html#template-inheritance) it ([read more](#template-structure))
 
 
-### Goals 
+## Table of Contents
+
+- [Goals](#goals)
+- [Styling with `CSS`](#styling-with-css)
+    - [HTML Structure](#html-structure)
+    - [Example: *sidebar layout*](#example-sidebar-layout)
+    - [Example: *style specific parts only*](#example-style-specific-parts-only)
+- [Templating](#templating)
+    - [HTML*5*?](#html5)
+    - [Template Structure](#template-structure)
+    - [inheritance](#inheritance)
+    - [blocks](#blocks)
+        - [insert blocks](#insert-blocks)
+        - [partials](#partials)
+    - [overview](#overview)
+    - [Examples](#examples)
+        - [override and insert blocks](#override-and-insert-blocks)
+- [*Pro-Tips®*](#pro-tips®)
+    - [webfonts](#webfonts)
+    - [debugging](#debugging)
+- [TODO](#todo)
+
+
+## Goals 
 
 (not reached yet)
 
