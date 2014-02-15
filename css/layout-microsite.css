@@ -28,12 +28,31 @@
 @import "mods/sticky-footer.css";
 
 /* - reduce the navigation list (first-level only) */
-@import "mods/nav-reduced.css";
+/*@import "mods/nav-reduced.css";*/
 
 /* - collapse & float the navigation list (good for small menus) */
 @import "mods/nav-collapsed.css";
 
+
+/* layout-level styles */
+
+/* fonts */
 body {
-  font-size: 2em;
+  font-family: 'Lucida Grande', Verdana, Tahoma, "Helvetica", "Helvetica Ltd", "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.125em;
+  letter-spacing: initial;
   line-height: 1.25;
+}
+article {
+  font-size: 1.25em;
+}
+
+/* horizontal rules */
+body > wrapper > hr {
+  border-bottom: 0.25em solid #888;
+}
+
+/* contact inside header */
+header .contact {
+/*text-align: right;*/
 }
