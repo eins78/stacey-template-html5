@@ -178,7 +178,8 @@ Also, you are allowed to "invent" your own properties, as long as they start wit
 One *could* use it for styling, but it is most useful for scripting. 
 This is another reason we need fewer classes, 
 and it also potentially makes the markup less confusing 
-for designers since all the classes that remain are meant for them.
+for designers since all the classes that remain have a semantic meaning
+(an are only used when there is no equivalent element).
 
 Example: 
 
