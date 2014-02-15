@@ -1,0 +1,16 @@
+{% if page.children %}
+  <ol>
+    {% for child in page.children %}
+      <li {% if child.slug == page.slug %}class="selected"{% endif %}>
+        <a href="{{ child.url }}">
+        {% if child.title %}
+          {{ child.title }}
+        {% else %}
+          {{ child.page_name }}
+        {% endif %}
+        </a>
+        {% include 'partials/navigation/navigation-children.html' with { 'page' : child } %}
+      </li>
+    {% endfor %}
+  </ol>
+{% endif %}

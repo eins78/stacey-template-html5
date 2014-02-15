@@ -28,7 +28,7 @@
       {% block navigation_before %}
       {% endblock %}
       {% block navigation %}
-        {% include 'partials/_navigation.html' %}
+        {% include 'partials/_navigation.html' with { 'id': 'primary' } %}
       {% endblock %}
       {% block navigation_after %}
       {% endblock %}
