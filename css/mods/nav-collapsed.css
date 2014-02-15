@@ -6,8 +6,7 @@
 
 /* make sure navs are high enough */
 nav {
-  line-height: 1;
-  min-height: 3em;
+  display: inline-block;
 }
 
 /* reset base nav spacing */
