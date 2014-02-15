@@ -33,36 +33,36 @@ article nav {
   width: 100%;
 }
 
-article nav p {
+article nav.page-navigation p {
   float: left;
   margin-top: 0;
 }
-article nav p:last-child, 
-article nav p:first-child {
+article nav.page-navigation p:last-child, 
+article nav.page-navigation p:first-child {
   width: 50%;
 }
-article nav #project-count { 
+article nav.page-navigation #project-count { 
   width: 19%;
   text-align: center;
 }
-article nav p:first-child,
-article nav p:last-child {
+article nav.page-navigation p:first-child,
+article nav.page-navigation p:last-child {
   width: 40%;
 }
-article nav p:first-child a {
+article nav.page-navigation p:first-child a {
   float: left;
   text-align: left;
 }
-article nav p:last-child a {
+article nav.page-navigation p:last-child a {
   float: right;
   text-align: right;
 }
-article nav p:first-child:before {
+article nav.page-navigation p:first-child:before {
   content: "← ";
   float: left;
   width: 1.5em;
 }
-article nav p:last-child:before {
+article nav.page-navigation p:last-child:before {
   content: " →";
   float: right;
   width: 1.5em;
