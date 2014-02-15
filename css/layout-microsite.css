@@ -27,11 +27,11 @@
 /* - make a the footer stick to bottom if page is to small */
 @import "mods/sticky-footer.css";
 
-/* - reduce the navigation list (first-level only) */
-/*@import "mods/nav-reduced.css";*/
-
 /* - collapse & float the navigation list (good for small menus) */
 @import "mods/nav-collapsed.css";
+
+/* - reduce the navigation list (first-level only) */
+@import "mods/nav-reduced.css";
 
 
 /* layout-level styles */

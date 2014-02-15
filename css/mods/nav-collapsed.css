@@ -4,8 +4,9 @@
 
 */
 
-/* make sure navs are high enough */
 nav#primary {
+  width: 100%;
+/* make sure navs are high enough */
   display: inline-block;
 }
 

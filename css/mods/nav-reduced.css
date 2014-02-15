@@ -1,6 +1,8 @@
+/* second-level list inside navs */
 nav ul ul,
 nav ul ol,
 nav ol ul,
 nav ol ol {
-  display: none;
+  /* hide them visually */
+  display: none !important;
 }
