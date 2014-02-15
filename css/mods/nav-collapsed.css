@@ -1,0 +1,37 @@
+/* COLLAPSED NAVIGATION LISTS 
+
+  TODO: maybe import .nav from bootstrap… (less?)
+
+*/
+
+/* make sure navs are high enough */
+nav {
+  line-height: 1;
+  min-height: 3em;
+}
+
+/* reset base nav spacing */
+nav ul ul, nav ul ol, 
+nav ol ul, nav ol ol {
+  padding-left: 0em;
+}
+nav ul li a,
+nav ol li a {
+  margin-right: 0.5em;
+}
+
+
+nav li, nav a, 
+nav ul, nav ol {
+  float: left;
+  position: relative;
+  display: inline-block;
+}
+
+nav ul, nav ol {
+  font-weight: 500;
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+}
+

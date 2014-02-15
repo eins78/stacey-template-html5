@@ -1,0 +1,49 @@
+/* COLORS */
+
+/* - all greys are in hex (#888)
+   - colors all in hsl
+   - default hue (233) is blue
+*/
+
+/* main background color */
+body {
+  background-color: white;
+}
+/* main layout 'boxes bg-color */
+header, nav, article, footer {
+  background-color: white;
+}
+
+a, a:link {
+  color: hsla(233, 75%, 23%, 1);
+}
+
+a:hover {
+  color: hsla(233, 75%, 23%, 1);
+  border-bottom-color: hsla(189, 75%, 23%, 1);
+}
+
+/* horizontal rules */
+hr {
+  border-color: #888; /* middle grey */
+}
+
+/* class to mute text,
+  also applied to less important elements
+ */
+.muted,
+footer, small, aside,
+.colophon {
+  color: #888; /* middle grey */
+}
+
+/* thumbnail bg-color (visible if no image exists) */
+.project-thumb {
+  background-color: #eee; /* light grey */
+}
+
+/* fake list markers */
+nav li:before {
+  color: #888; /* middle grey */
+}
+

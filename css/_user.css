@@ -1,0 +1,104 @@
+/*@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,500,900);*/
+/*@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:300,500,900);*/
+
+/* TYPO */
+
+html {
+  font-size: 1em;  
+/*           ⬆︎ affects layout spacing! 
+  It sets the 'rem', and is base for 'em' units.
+  Higher = more (vertical) spacing.
+*/
+}
+
+body {
+  font-family: 'Source Sans Pro', monospace;
+  font-weight: 500;  
+  font-size: 1em;  
+  /*         ⬆︎ affects layout spacing! 
+  It alters 'em' units.
+  Higher = more (horizontal) spacing.
+*/
+}
+
+tt, code, kbd, samp {
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 300;  
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 900;
+}
+
+blockquote {
+/*  border-left-style: dotted;*/
+}
+
+/* example how to style a specific article */
+body.pbdf64c article {
+  font-family: 'Vollkorn', sans-serif;
+}
+
+
+/* Set COLORS */
+
+body {
+  background-color: #ddd;
+/*  background-image: url(http://subtlepatterns.com/patterns/geometry.png);*/
+/*  background-attachment: fixed;*/
+}
+
+header, nav#primary, article, footer {
+  background-color: white;
+/*  background-color: hsl(0, 0%, 96%);*/
+}
+
+/* example how to reset stuff from the base to the browser default */
+header {
+/*  background: inherit;*/
+}
+
+a, a:link {
+  color: hsla(80, 75%, 23%, 1);
+}
+
+a:visited {
+/*  color: black;*/
+}
+
+a:hover {
+  color: hsla(80, 75%, 23%, 1);
+  border-bottom-color: hsla(80, 75%, 23%, 1);
+}
+
+
+/* Hide elements 
+*/
+
+article .subpages-top {
+  display: none;
+}
+
+/* ICONS */
+
+article nav p:first-child:before {
+/*  content: "← ";*/
+}
+article nav p:last-child:after {
+/*  content: " →";*/
+}
+
+
+/* Customize Text (language) */
+
+.metadata .media:before {
+/*  content: "Medium: ";*/
+}
+.metadata .size:before {
+/*  content: "Maße: ";*/
+}
+.metadata .material:before {
+/*  content: "Material: ";*/
+}
+
+

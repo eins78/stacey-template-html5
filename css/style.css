@@ -1,0 +1,32 @@
+/* This is the only stylesheet directly loaded by stacey, 
+   all other styles are imported.
+
+   - uncomment *only one* of the ready-made layouts
+   - do your changes in user.css
+   - or start without importing a layout
+   - layouts use small modules, you can import them, too
+
+*/
+
+/* Default Layout: microsite */
+@import "layout-microsite.css";
+
+/* TODO: Layout: stacey1 */
+/*@import "layout-stacey1.css";*/
+
+/* TODO: Layout: stacey2 */
+/*@import "layout-stacey2.css";*/
+
+/* TODO: Layout: stacey3 */
+/*@import "layout-stacey3.css";*/
+
+
+/* Import User styles */
+
+@import "user.css";
+/*         ⬆︎ put your customizations in this file.
+  - uncomment the line above to activate the @import.
+  - copy or rename '_user.css' to 'user.css if you
+    want some example styles; or start a new file.
+------------------------------------------------
+*/

@@ -1,0 +1,19 @@
+/* normalize from <http://necolas.github.io/normalize.css/> 
+ (resets differnces in the browser default styles, so we can build upon a consistent base)
+*/
+@include "../bower_components/normalize-css/normalize.css";
+
+/* make life easier and type readable */
+*, *, :before, :after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+}
+
+/* images: don't be wider than your surrounding box */
+img {
+  max-width: 100%;
+  /* but don't stretch them while rescaling */
+  height: auto;
+}

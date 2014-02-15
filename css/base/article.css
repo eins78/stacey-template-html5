@@ -1,0 +1,60 @@
+/* make sure articles have enough padding below */
+article {
+  padding-bottom: 2em;
+}
+
+/* horizontal rules inside articles *are* visible */
+article hr {
+  margin: 1em 0;
+  border-bottom: 0.15em solid #888;
+}
+
+article figure {
+  margin-bottom: 2em;
+}
+
+article .metadata {
+  min-height: 1em;
+}
+
+/* hidden elements */
+.category-nav-top {
+  display: none;
+}
+
+/* navigation inside articles */
+
+article nav p {
+  float: left;
+  margin-top: 0;
+}
+article nav p:last-child, 
+article nav p:first-child {
+  width: 50%;
+}
+article nav #project-count { 
+  width: 19%;
+  text-align: center;
+}
+article nav p:first-child,
+article nav p:last-child {
+  width: 40%;
+}
+article nav p:first-child a {
+  float: left;
+  text-align: left;
+}
+article nav p:last-child a {
+  float: right;
+  text-align: right;
+}
+article nav p:first-child:before {
+  content: "← ";
+  float: left;
+  width: 1.5em;
+}
+article nav p:last-child:before {
+  content: " →";
+  float: right;
+  width: 1.5em;
+}

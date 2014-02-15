@@ -1,0 +1,182 @@
+/* TYPO (base) 
+   - only general (HTML) elements
+   - font setup: base family, weight and size
+       - where `rem` unit is used, it refers to this size
+  - basic spacing for main and their inner elements
+  - no macro layout stuff here (floating sidebars etc.)
+*/
+
+/* set base */
+html {
+  font-family: 'Helvetica Neue', 'Helvetica', Tahoma, Arial, sans-serif;
+  font-size: 1em; /* this affect layout spacing! */
+  font-weight: 400;  
+}
+
+/* body only has margins left and right */
+body {
+  margin: 0 1rem;
+}
+
+/* all headings have 1 1/2 line-height */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.5;
+  /* reset all margins */
+  margin: 0;
+  /* add margin below */
+  margin-bottom: 1em;
+}
+
+/* links */
+a:link {
+  /* don't default underline, */
+  text-decoration: none;
+  /* instead make a border below*/
+  border-bottom: 0.125em solid transparent;
+}
+
+/* main layout 'boxes' */
+header, nav, article, footer {
+  /* rem = relative to html font size */
+  padding-left: 1rem; 
+  padding-right: 1rem; 
+  /* em = relative to element font size */
+  padding-top: 1em;
+  padding-bottom: 1em;
+  /* also a consistent margin below */
+  margin-bottom: 1rem;
+}
+
+/* sections should clear floats and have margin */
+section {
+  float: none;
+  clear: both;
+  margin-bottom: 1em;
+}
+
+/* less-important content has smaller font, less weight, but more spacing */
+aside, small, footer {
+  font-size: 0.8em;
+  font-weight: 300;
+  letter-spacing: 0.034em;
+}
+/* asides get smaller font and a margin (relative 1em)*/
+/* TODO: use ex? */
+aside {
+  padding: 1.25em; /*  1/0.8  - adjusted for font-size */
+}
+
+/* blockqoutes */
+blockquote {
+  /* have no margin, */
+  margin-left: 0;
+  /* but inner padding and gray border on left side*/
+  padding-left: 1em;
+  border-left: 0.2em solid hsla(0, 0%, 0%, 0.24);
+}
+
+/* lists */
+
+ul, ol, dl {
+  /* have neither margin nor padding */
+  margin: 0;
+  padding: 0;
+  /* instead we set a line-height for readability*/
+  line-height: 1.5;
+  /* and position the marker outside */
+  list-style-position: inside;
+}
+
+/* nested lists however… */
+ul ul, ul ol,
+ol ul, ol ol {
+  /* clear default padding*/
+  padding: 0;
+  /* left padding for clarity of nesting*/
+  padding-left: 1em;
+}
+
+/*  unordered list… */
+ul {
+  /* have a square marker */
+  list-style-type: square;
+}
+
+/* definiton lists */
+dl dd {
+  margin-left: 1em;
+}
+dl dt:after {
+  content: ": ";
+}
+
+/* figures */
+
+/* center images inside figures */
+figure img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+/* center and space figure caption text */
+figcaption {
+  text-align: center;
+  padding: 1em;
+}
+
+/* title in header needs less space */
+header h1 {
+  margin-bottom: 0;
+}
+
+/* footer gets extra space above */
+footer {
+  margin-bottom: 1em;
+}
+
+/* hr's clear floating content but are otherwise invisible */
+hr {
+  float: none;
+  clear: both;
+  border: none;
+  height: 0;
+  padding: 0;
+  margin: 0;
+}
+
+/* headings 
+
+   – we need to set them explictly because otherwise 
+     browser defauls make them smaller inside <article> etc.
+
+   - while we're declaring them, we also make them bigger.
+
+   - since we use ems (relative sizes), normally it should 
+     not be neccesarry to change this!
+
+*/
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.8em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h4 {
+  font-size: 1.3em;
+}
+
+h5, h6 {
+  font-size: 1em;
+}
+
+h5 {
+  font-weight: bolder;
+}
+

@@ -1,0 +1,34 @@
+/* This is the microsite layout  */
+
+/* - comment out modules you don't need
+   - only make changes in user.css!
+      - makes later upgrades easier/possible
+      - user.css is loaded last, so always overrides base
+      - hint: copy snippets from the modules and edit
+*/
+
+/* important set up stuff */
+@import "base/setup.css";
+
+/* general html elements (font and spacing): */
+@import "base/typo.css";
+
+/* nav lists typo and spacing */
+@import "base/navigation.css";
+
+/* elements inside article */
+@import "base/article.css";
+
+/* all the color definitions! */
+@import "base/colors.css";
+
+/* Layout modification modules: */
+
+/* - make a the footer stick to bottom if page is to small */
+@import "mods/sticky-footer.css";
+
+/* - reduce the navigation list (first-level only) */
+@import "mods/nav-reduced.css";
+
+/* - collapse & float the navigation list (good for small menus) */
+@import "mods/nav-collapsed.css";

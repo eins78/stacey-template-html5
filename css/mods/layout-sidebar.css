@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#wrapper {
+  width: 60em;
+}
+
+
+nav#primary {
+  float: left;
+}
+
+header, nav#primary, article#content {
+  margin-left: 1em; 
+  padding-left: 1em;
+  margin-right: 1em;
+  padding-right: 1em;
+}
+
+article {
+  float: left;
+  margin-right: -1em;
+  margin-top: 1em;
+}
+
+
+  
+  header {
+    padding-bottom: 3em;
+  }
+
+  
+  section {
+    float: none;
+    clear: both;
+  }
+
+  nav ul,
+  ul.metadata {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  nav > ul > li {
+    display: list-item;
+    font-weight: 900;
+  }
+
+  nav ol {
+    display: list-item;
+    font-weight: 500;
+    list-style-type: none;
+    padding-left: 0;
+    margin-left: 0;
+  }
+  
+  nav ol li:after {
+    content: none;
+  }
+
+  nav li, nav a, nav ul, nav ol {
+    float: none;
+  }
+  
+  nav li, nav ul, nav ol {
+  position: relative;
+  display: block;
+  }
+  
+  nav#primary {
+/*    float: left;*/
+    width: 16em;
+    margin-bottom: 1em;
+    /* make it line up with the #content h2 */
+    padding-top: 1.25em;
+  }
+
+  article {
+    float: left;
+    font-size: 1.25em;
+    width: 48em; /*  60/1.25  */
+    padding: 0 1em;
+    margin-left: 0.8em; /*  1/1.25  */
+    margin-bottom: 4em;
+    margin-top: 0;
+  }
+  
+}

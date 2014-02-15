@@ -1,0 +1,22 @@
+/* sticky footer à la bootstrap */
+/* <http://getbootstrap.com/examples/sticky-footer/> */
+html,
+body {
+  height: 100%;
+}
+
+/* Wrapper for page content to push down footer */
+#wrapper {
+  min-height: 100%;
+  height: auto;
+  /* Negative indent footer by its height */
+  margin: 0 auto -2.4rem;
+  /* Pad bottom by footer height */
+  padding-bottom: 2.4rem;
+}
+
+/* Set the fixed height of the footer here */
+footer {
+  min-height: 2.4rem;
+  padding: 1em 1rem;
+}
