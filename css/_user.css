@@ -59,7 +59,7 @@ header {
 }
 
 a, a:link {
-  color: hsla(80, 75%, 23%, 1);
+  color: hsla(233, 75%, 23%, 1);
 }
 
 a:visited {
@@ -67,7 +67,7 @@ a:visited {
 }
 
 a:hover {
-  color: hsla(80, 75%, 23%, 1);
+  color: hsla(233, 75%, 23%, 1);
   border-bottom-color: hsla(80, 75%, 23%, 1);
 }
 
