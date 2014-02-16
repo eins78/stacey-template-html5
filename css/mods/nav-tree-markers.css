@@ -1,0 +1,70 @@
+/* # Navigation List Tree 
+
+   - unicode box symbols as list markers 
+   – inspired by UNIX 'tree'
+   - works best w/ monospace font
+   - only 4 levels of nesting…
+*/
+
+/* reset padding of nested lists */
+nav ul ul, nav ul ol, nav ol ul, nav ol ol {
+  padding-left: 0;
+}
+
+/* - first-level: */
+body nav li:before {
+  content: "├ ";
+  /* consistent width (including some space) */
+  width: auto; /* adjust according to chosen symbol */
+}
+nav li:first-child:before {
+  content: "┌ ";
+}
+nav li:last-child:before {
+  content: "└ ";
+}
+
+/* second-level: */
+nav li li:before {
+  content: "│ ├ ";
+/*  width: 2em;*/
+}
+nav li li:last-child:before {
+  content: "│ └ ";
+}
+nav li:last-child li:before {
+  content: "  ├ ";
+}
+nav li:last-child li:last-child:before {
+  content: "  └ ";
+}
+
+/* third-level: */
+nav li li li:before {
+  content: "│ │ ├ ";
+/*  width: 3.5em;*/
+}
+nav li li li:last-child:before {
+  content: "│ │ └ ";
+}
+nav li li:last-child li:before {
+  content: "   ├ ";
+}
+nav li li:last-child li:last-child:before {
+  content: "   └ ";
+}
+
+/* fourth-level: */
+nav li li li li:before {
+  content: "│ │ │ ├ ";
+  width: 4.5em;
+}
+nav li li li li:last-child:before {
+  content: "│ │ │ └ ";
+}
+nav li li li:last-child li:before {
+  content: "    ├ ";
+}
+nav li li li:last-child li:last-child:before {
+  content: "   └ ";
+}
