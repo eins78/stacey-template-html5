@@ -1,5 +1,5 @@
 {% if page.children %}
-  <ul class="projects">
+  <ul>
   {% for child in page.children %}
     <li class="{{ child.id }}">
       {% if child.date %}<p id="date">{% include 'partials/date.html' %}</p>{% endif %}
@@ -11,7 +11,7 @@
         {% endif %}
         <a href="{{ child.url }}">{{ child.title }}</a>
       </h2>
-      {% include 'partials/navigation/category-lists.html' with { 'page' : child } %}
+      {% include 'partials/listing/category.html' with { 'page' : child } %}
     </li>
   {% endfor %}
   </ul>
