@@ -20,7 +20,7 @@ a, a:link {
 
 a:hover {
   color: hsla(233, 75%, 23%, 1);
-  border-bottom-color: hsla(189, 75%, 23%, 1);
+  border-bottom-color: hsla(233, 75%, 23%, 1);
 }
 
 /* horizontal rules */

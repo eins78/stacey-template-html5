@@ -1,5 +1,5 @@
 /* normalize from <http://necolas.github.io/normalize.css/> 
- (resets differnces in the browser default styles, so we can build upon a consistent base)
+ (resets differences in the browser default styles, so we can build upon a consistent base)
 */
 @include "../bower_components/normalize-css/normalize.css";
 

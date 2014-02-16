@@ -47,6 +47,7 @@ This is a **blank** template (no style), made to be [customizable, extensible an
 - Only add `class`es and `id`s where neccessary for eindeutigkeit or styling
 - Common template options can be set from config (`shared.yml` or any sub-page…)
 - Ship some default styles: 1-3 main stylesheets inspired by the old stacey templates which build on (`@import) common modules.
+- Fully commented and documented `CSS` source
 - For all interesting data points in listings, add appropriate classes (for use with `list.js`)
 - Don't rely on JavaScript for anything - js plugins extending the functionality should also extend the markup themselfes <small>(looking at you, old .gallery-nav)</small>
 - Use `HTML5`'s `data-foo` properties
@@ -347,8 +348,9 @@ How to use them: you get a small snippet from google and put that in the first l
 
 ## TODO
 
-- if language: `<html lang="">`
+- if language: `<html lang="{{ lang }}">`
 - feed title in head
+- nav#primary: mark li.active
 
 - stacey split:
     - clone stacey
@@ -362,3 +364,4 @@ How to use them: you get a small snippet from google and put that in the first l
     - script: make a starterkit.zip
         - attach to every github release
     
+- follow aria recommendations (accessibility)
