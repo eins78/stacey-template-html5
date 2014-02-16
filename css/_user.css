@@ -1,7 +1,13 @@
-/*@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,500,900);*/
-/*@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:300,500,900);*/
 
-/* TYPO */
+/* TYPO 
+   ----
+*/
+
+/* First, import all the non-standard fonts you want to use
+   as a webfont, for example from <google.com/fonts>
+*/
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,500,900);
+@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:300,500,900);
 
 html {
   font-size: 1em;  
@@ -12,9 +18,9 @@ html {
 }
 
 body {
-  font-family: 'Source Sans Pro', monospace;
+  font-family: 'Source Sans Pro', monospace;*/
   font-weight: 500;  
-  font-size: 1em;  
+/*/*  font-size: 1em;  */
   /*         ⬆︎ affects layout spacing! 
   It alters 'em' units.
   Higher = more (horizontal) spacing.
@@ -30,56 +36,76 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 900;
 }
 
+/* Example: different block code border */
 blockquote {
 /*  border-left-style: dotted;*/
 }
 
-/* example how to style a specific article */
+/* Example: how to style a specific article
+     You'll need to look up the class in the inspector.
+*/
 body.pbdf64c article {
-  font-family: 'Vollkorn', sans-serif;
+/*  font-family: 'Vollkorn', sans-serif;*/
 }
 
 
-/* Set COLORS */
+/* COLORS 
+   ------
+*/
+
+/* this sets all kinds of links, also :hover, :visited, etc*/
+a, a:link {
+  color: hsla(180, 75%, 23%, 1);
+}
+
+/* now just set everything else only as l needed */
+a:hover {
+  color: hsla(180, 75%, 23%, 1);
+  border-bottom-color: hsla(180, 75%, 23%, 1);
+}
 
 body {
-  background-color: #ddd;
+/*  background-color: #ddd;*/
+  background-color: hsla(180, 75%, 23%, 1);
 /*  background-image: url(http://subtlepatterns.com/patterns/geometry.png);*/
 /*  background-attachment: fixed;*/
 }
 
 header, nav#primary, article, footer {
   background-color: white;
-/*  background-color: hsl(0, 0%, 96%);*/
 }
 
-/* example how to reset stuff from the base to the browser default */
+/* Example: how to reset stuff to the browser default,
+            even if it was set it theme */
 header {
-/*  background: inherit;*/
+/*  background: initial;*/
 }
 
-a, a:link {
-  color: hsla(233, 75%, 23%, 1);
+/* thumbnail bg-color (visible if no image exists) */
+.project-thumb {
+  background-color: #eee; /* light grey */
 }
 
-a:visited {
-/*  color: black;*/
-}
-
-a:hover {
-  color: hsla(233, 75%, 23%, 1);
-  border-bottom-color: hsla(80, 75%, 23%, 1);
+/* list markers */
+nav li:before {
+  color: hsla(180, 75%, 23%, 0.5);
 }
 
 
-/* Hide elements 
+
+
+/* Hide elements
+   -------------
 */
 
 article .subpages-top {
   display: none;
 }
 
-/* ICONS */
+
+/* ICONS 
+   -----
+*/
 
 article nav p:first-child:before {
 /*  content: "← ";*/
@@ -89,7 +115,9 @@ article nav p:last-child:after {
 }
 
 
-/* Customize Text (language) */
+/* Customize Text (language) 
+   -------------------------
+*/
 
 .metadata .media:before {
 /*  content: "Medium: ";*/
