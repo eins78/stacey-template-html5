@@ -64,7 +64,9 @@
               
               {% block main_tail %}
                 {% if page.nolist != true %}
-                  {% include 'partials/listing/category.html' %}
+                  <nav class="category">
+                    {% include 'partials/listing/category.html' %}
+                  </nav>
                 {% endif %}
               {% endblock %}
 

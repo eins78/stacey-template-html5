@@ -2,15 +2,15 @@
   <ul>
   {% for child in page.children %}
     <li class="{{ child.id }}">
-      {% if child.date %}<p id="date">{% include 'partials/date.html' %}</p>{% endif %}
       <h2>
-        {% if child.thumb %}
-          <img class="project-thumb" src="{{ child.thumb.url }}" alt="{{ page.title }}">
-        {% else %}
-          <div class="project-thumb"{% if child.thumbcolor %} class="{{ child.thumb-color }}"{% endif %}></div>
-        {% endif %}
         <a href="{{ child.url }}">{{ child.title }}</a>
       </h2>
+      {% if child.thumb %}
+        <img class="project-thumb" src="{{ child.thumb.url }}" alt="{{ page.title }}">
+      {% else %}
+        <div class="project-thumb"{% if child.thumbcolor %} class="{{ child.thumb-color }}"{% endif %}></div>
+      {% endif %}
+      {% if child.date %}{% include 'partials/date.html' %}{% endif %}
       {% include 'partials/listing/category.html' with { 'page' : child } %}
     </li>
   {% endfor %}
