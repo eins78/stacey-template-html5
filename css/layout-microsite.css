@@ -56,3 +56,11 @@ body > wrapper > hr {
 header .contact {
 /*text-align: right;*/
 }
+
+/*FIXME: temporarly hide not-yet-styled elements */
+
+nav.category li time,
+nav.category .project-thumb {
+  display: none;
+}
+
