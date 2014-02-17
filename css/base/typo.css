@@ -115,6 +115,12 @@ header, nav, article, footer {
   /* also a consistent margin below */
   margin-bottom: 1rem;
 }
+/* reset padding and margin for nav inside articles */
+article nav {
+  padding: 0;
+  margin: 0;
+}
+
 /* sections should clear floats and have margin */
 section {
   float: none;
