@@ -53,6 +53,23 @@ This is a **blank** template (no style), made to be [customizable, extensible an
 - Use `HTML5`'s `data-foo` properties
 
 
+## User configuration
+
+Common options and modifications can be done without editing
+`HTML` or `CSS`, by setting options in `yml` files inside the `content` folder.
+
+Options can be set in `_shared.yml` to make it the default 
+for any kind of page. 
+
+Set the same option to a different value in a `page.yml`, 
+`project.yml` or `category.yml` to override the default.
+
+Supported Settings are:
+
+### `nolist`
+
+Set `nolist: true` to not list subpages (only useful in `category.yml`).
+
 
 ## Styling with `CSS`
 
