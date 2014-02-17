@@ -28,51 +28,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* links */
-a:link {
+a, a:link {
   /* don't default underline, */
   text-decoration: none;
-  /* instead make a border below*/
+  /* instead make a border below */
   border-bottom: 0.125em solid transparent;
-}
-
-/* main layout 'boxes' */
-header, nav, article, footer {
-  /* rem = relative to html font size */
-  padding-left: 1rem; 
-  padding-right: 1rem; 
-  /* em = relative to element font size */
-  padding-top: 1em;
-  padding-bottom: 1em;
-  /* also a consistent margin below */
-  margin-bottom: 1rem;
-}
-
-/* sections should clear floats and have margin */
-section {
-  float: none;
-  clear: both;
-  margin-bottom: 1em;
-}
-
-/* less-important content has smaller font, less weight, but more spacing */
-aside, small, footer {
-  font-size: 0.8em;
-  font-weight: 300;
-  letter-spacing: 0.034em;
-}
-/* asides get smaller font and a margin (relative 1em)*/
-/* TODO: use ex? */
-aside {
-  padding: 1.25em; /*  1/0.8  - adjusted for font-size */
-}
-
-/* blockqoutes */
-blockquote {
-  /* have no margin, */
-  margin-left: 0;
-  /* but inner padding and gray border on left side*/
-  padding-left: 1em;
-  border-left: 0.2em solid hsla(0, 0%, 0%, 0.24);
 }
 
 /* lists */
@@ -110,6 +70,25 @@ dl dt:after {
   content: ": ";
 }
 
+/* blockqoutes */
+blockquote {
+  /* have no margin, */
+  margin-left: 0;
+  /* but inner padding and gray border on left side*/
+  padding-left: 1em;
+  border-left: 0.2em solid hsla(0, 0%, 0%, 0.24);
+}
+
+/* hr's clear floating content but are otherwise invisible */
+hr {
+  float: none;
+  clear: both;
+  border: none;
+  height: 0;
+  padding: 0;
+  margin: 0;
+}
+
 /* figures */
 
 /* center images inside figures */
@@ -125,6 +104,35 @@ figcaption {
   padding: 1em;
 }
 
+/* main layout 'boxes' */
+header, nav, article, footer {
+  /* rem = relative to html font size */
+  padding-left: 1rem; 
+  padding-right: 1rem; 
+  /* em = relative to element font size */
+  padding-top: 1em;
+  padding-bottom: 1em;
+  /* also a consistent margin below */
+  margin-bottom: 1rem;
+}
+/* sections should clear floats and have margin */
+section {
+  float: none;
+  clear: both;
+  margin-bottom: 1em;
+}
+
+/* less-important content has smaller font, less weight, but more spacing */
+aside, small, footer {
+  font-size: 0.8em;
+  font-weight: 300;
+  letter-spacing: 0.034em;
+}
+/* asides get smaller font and a margin (relative 1em)*/
+aside {
+  padding: 1.25em; /*  1/0.8  - adjusted for font-size */
+}
+
 /* title in header needs less space */
 header h1 {
   margin-bottom: 0;
@@ -135,15 +143,6 @@ footer {
   margin-bottom: 1em;
 }
 
-/* hr's clear floating content but are otherwise invisible */
-hr {
-  float: none;
-  clear: both;
-  border: none;
-  height: 0;
-  padding: 0;
-  margin: 0;
-}
 
 /* headings 
 
