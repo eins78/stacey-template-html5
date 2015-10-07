@@ -11,7 +11,7 @@ This is a **blank** template (no style), made to be [customizable, extensible an
 - **html5** (semantic, [valid](http://validator.w3.org/check?uri=http%3A%2F%2Fmfa.178.is%2F;outline=1))!
 - **style it just with CSS**!
 - lots of **optional metadata**! ([read more](#html-structure))
-- **configureable** with data
+- **configurable** with data
 - 1 `base.html` template, all other templates [extend](http://twig.sensiolabs.org/doc/templates.html#template-inheritance) it ([read more](#template-structure))
 
 
